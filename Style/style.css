@@ -1,0 +1,43 @@
+.img-chair001:hover{
+    margin-left: 30px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.loader{
+    position: fixed;
+    left: 0;
+    z-index: 50;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5396ee;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+.loader::after{
+    content:  "";
+    width: 110px;
+    background-image: url("/assets/loading.jp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 110px;
+    border: 15px  solid rgb(252, 255, 255);
+    border-top-color: rgb(58, 58, 162);
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+
+}
+@keyframes loading{
+    from{
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}
